@@ -1,0 +1,375 @@
+/* Code Của Nguyễn Mai Duy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear {
+    clear: both;
+}
+
+/* Phần css của CV */
+.cv-modal {
+    position: fixed; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cv-inline {
+    display: inline-block;
+    width: 100%;
+}
+.cv-breaker {
+    word-break: break-all;
+}
+.cv-col-3 {
+    width: 25%;
+    float: left;
+}
+.cv-col-5 {
+    float: left;
+    width: 41.6666666667%;
+}
+.cv-col-7 {
+    float: left;
+    width: 58.3333333333%;
+}
+.cv-col-9 {
+    width: 75%;
+    float: right;
+}
+.cv-col-12 {
+    width: 100%;
+}
+.cv-page-wrapper {
+    width: 40%;
+    height: 90%;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px #000;
+    background-color: #fafafa;
+    overflow-x:hidden;
+    overflow-y:auto;
+    animation: modalFadeIn ease 0.8s;
+}
+.cv-page {
+    position: relative;
+    /* width: 760px;  */
+    height: 1122px;
+}
+.cv-main-color {
+    /* color: #f9466d; */
+    color: #87b2de;
+    /* color: #0b9b39; */
+}
+.cv-bar {
+    background-image: url(../image/blue.png);
+    /* background-image: url(../image/green.jpg); */
+    /* background-image: url(../image/pink.png); */
+
+}
+.cv-bar-large {
+    width: 100%;
+    height: 15px;
+}
+.cv-bar-medium {
+    height: 5px;
+}
+.cv-bar-small {
+    height: 2px;
+    margin-bottom: 5px;
+}
+.cv-infor-wrapper {
+    display: inline-block;
+    padding: 15px 30px;
+    width: 100%;
+}
+.cv-ava-outer {
+    width: 25%;
+    margin-top: 6px;
+    border-radius: 50px;
+}
+
+.cv-ava-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+.cv-ava-inner img{
+    width: 90%;
+    height: 160px;
+    border-radius: 50px;
+}
+.cv-infor {
+    padding-left: 40px;
+}
+.cv-infor-name-wrapper {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cv-infor-name-wrapper span{
+    /* border-top: 1px #f9466d solid;
+    border-bottom: 1px #f9466d solid; */
+    
+    letter-spacing: 4px;
+    line-height: 44px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.cv-infor-name {
+    border-top: 1px #87b2de solid;
+    border-bottom: 1px #87b2de solid;
+    /* border-top: 1px #0b9b39 solid;
+    border-bottom: 1px #0b9b39 solid; */
+}
+.cv-infor-job-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.cv-infor-job {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.cv-infor-maxim-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(135, 178, 222, 0.2);
+    /* background-color: rgba(11, 155, 57, 0.2); */
+    border-radius: 50px;
+}
+.cv-infor-maxim {
+    display: inline-block;
+    margin: 10px 20px;
+    text-align: center;
+}
+.cv-infor-footer {
+    padding: 0 30px;
+}
+.cv-left {
+    padding: 10px 0 0 20px;
+}
+.cv-right {
+    padding: 10px 20px 0 0;
+}
+.cv-title-wrapper span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    max-width: 100%;
+}
+.cv-profile-wrapper {
+    padding: 5px 10px;
+}
+
+.cv-profile-infor-row {
+    display: flex;
+    margin-bottom: 8px;
+}
+.cv-profile-infor-row i {
+    min-width: 25px;
+    height: 25px;
+    
+    color: #fff;
+    border-radius: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+}
+.cv-icon {
+    background-color: #87b2de;
+    /* background-color: #0b9b39; */
+}
+.cv-profile-infor-row:first-child {
+    padding-top: 10px;
+}
+
+.cv-profile-infor-row span {
+    font-size: 14px;
+    width: 300px;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.cv-coder {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    position: absolute;
+    bottom: 20px;
+}
+.cv-coder span {
+    margin-right: 16px;
+}
+.cv-footer {
+    position: absolute;
+    bottom: 0;
+}
+.cv-job-infor-wrapper {
+    list-style: none;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.cv-job-title {
+    width: 60%;
+    float: left;
+    font-weight: 550;
+    font-size: 14px;
+    color: #333;
+}
+.cv-job-time {
+    width: 40%;
+    color: #9c9c9c;
+    float: left;
+    text-align: right;
+    font-weight: 550;
+    font-size: 13px;
+}
+.cv-job-title-wrapper {
+    padding-top: 10px;
+}
+.cv-job-content-wrapper {
+    margin-left: 20px;
+}
+.cv-job-major {
+    line-height: 1;
+    color: #9c9c9c;
+    font-style: italic;
+}
+.cv-skill {
+    line-height: 1;
+}
+.open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* .preview {
+    justify-content: center;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    right: 15%;
+    top:25%;
+    border: none;
+    border-radius: 16px;
+}
+.preview:hover {
+    border: 2px #000 solid;
+    background-color: #ccc;
+} */
+
+
+
+/* Phần css của bảng chọn màu */
+.cv-selection-color {
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    animation: modalFadeIn ease 0.8s;
+    align-self: flex-start;
+}
+.selection-color-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+}
+.selection-color-title {
+    color: #fff;
+    font-size: 20px;
+}
+.selection-color-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selection-color-btn {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.btn-blue {
+    background-color: #87b2de;
+    border: 2px #000 solid;
+}
+.btn-pink {
+    background-color: #f9466d;
+}
+.btn-green {
+    background-color: #0c9c3a;
+}
+.selection-color-btn:hover {
+    opacity: 0.8;
+    border: 2px #000 solid;
+}
+.selection-color-operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-operation {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-close-cv {
+    border: 1px #dc3545 solid;
+    color: #dc3545;
+    background-color: #fff;
+}
+.btn-close-cv:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border: 1px #dc3545 solid;
+}
+
+.btn-dowload-cv {
+    border: 1px #28a745 solid;
+    color: #28a745;
+    background-color: #fff;
+}
+.btn-dowload-cv:hover {
+    color: #fff;
+    background-color: #28a745;
+    border: 1px #28a745 solid;
+}

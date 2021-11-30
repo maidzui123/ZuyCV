@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <title>CV</title>
+    
+</head>
+<body>
+    
+    <div class="main bg">
+        <div class="star-field">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+        </div>
+    
+        <div class="heading">Your CV Makes Your Future</div>
+        <div class="input-main scrollbar" id="style-1">
+            <form>
+                <div class="heading-1">Nhập Thông Tin CV</div>
+                <div class="input-main-picture">
+                    <div class="file-upload">
+                        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                        <p>
+                            <label id="upload" for="file" style="cursor: pointer;">
+                                <i class="ti-upload" for="file" style="cursor: pointer;"></i>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <label class="lable-main">Họ và tên</label>
+                    <input id="hoten" class="input" type="text" name="hoten" onkeyup="myFunction('hoten','cv-name')" value="Nguyễn Văn A">
+                </div>
+                <div>
+                    <label class="lable-main" >Tiêu đề phụ</label>
+                    <input id="chuyennganh" class="input" type="text" name="chuyennganh" onkeyup="myFunction('chuyennganh','cv-job')" value="Lập Trình Viên">
+                </div>
+                <div>
+                    <label class="lable-main">Châm ngôn sống</label>
+                    <input id="chamngon" class="input" type="text" name="chamngon" onkeyup="myFunction('chamngon','cv-maxim')" value="Cách tốt nhất để thoát khỏi khó khăn là vượt qua nó.">
+                </div>
+                <div>
+                    <label class="lable-main" >Ngày tháng năm sinh</label>
+                    <input id="sinhnhat" class="input" type="date" name="sinhnhat" value="2002-08-19">
+                </div>
+                <div>
+                    <label class="lable-main" >Địa chỉ</label>
+                    <input id="diachi" class="input" type="text" name="diachi" onkeyup="myFunction('diachi','cv-address')" value="Số 1 Phước Mỹ Trung, Bến Tre">
+                </div>
+                <div>
+                    <label class="lable-main" >Số điện thoại liên lạc</label>
+                    <input id="sdt" class="input" type="text" name="sdt" onkeyup="myFunction('sdt','cv-phone')" value="091 234 5678">
+                </div>
+                <div>
+                    <label class="lable-main" >Email</label>
+                    <input id="email" class="input" type="email" name="email" onkeyup="myFunction('email','cv-email')" value="adeptrai@gmail.com">
+                </div>
+                <div>
+                    <label  class="lable-main">Facebook</i></label>
+                    <input id="mxh" class="input" type="text" name="mxh" onkeyup="myFunction('mxh','cv-facebook')" value="https://www.facebook.com/ADepTrai">
+                </div>
+                <div class="heading-1">Thông tin CV</div>
+                <div>
+                    <div class="form-select" >
+                        <h4 class="subheading">Học Vấn</h4>
+                        <div id="form-select-edu">
+                              
+                            <!-- <div class="sub-add-edu">
+                            
+                                <h6 class="sub-heading-add">Đại học Tôn Đức Thắng</h6>
+                                <P class="sub-p-add">kỹ thuật phần mềm</P>
+                                <button class="sub-add-edu-dele"  type="button"><i class="ti-close"></i></button>
+                            
+
+                            </div>  -->
+
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="form-edu-add js-add-edu"  type="button">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Kinh Nghiệm làm việc</h4>
+                        <div id="form-select-exp">
+                              
+                             <!-- <div class="sub-add-exp">
+                            
+                                <h6 class="sub-heading-add">Tên công việc</h6>
+                                <P class="sub-p-add">Công ty</P>
+                                <button class="sub-add-exp-dele"  type="button"><i class="ti-close"></i></button>
+                            
+
+                            </div>   -->
+
+                        </div>
+                        <div class="btn-wrapper">
+                            <button class="form-exp-add js-add-exp" type="button">Thêm</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Hoạt động</h4>
+                        <div id="form-select-act">
+                              
+                            <!-- <div class="sub-add-act">
+                           
+                               <h6 class="sub-heading-add">Tên hoạt động</h6>
+                               <P class="sub-p-add">Tổ chức</P>
+                               <button class="sub-add-act-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>   -->
+
+                       </div>
+                       <div class="btn-wrapper">
+                            <button class="form-act-add js-add-act" type="button">Thêm</button>
+                       </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Giải Thưởng</h4>
+                        <div id="form-select-gt">
+                              
+                             <!-- <div class="sub-add-gt">
+                           
+                               <h6 class="sub-heading-add">Năm nhận giải thưởng</h6>
+                               <P class="sub-p-add">Tên giải thưởng</P>
+                               <button class="sub-add-gt-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>    -->
+
+                       </div>
+                       <div class="btn-wrapper">
+                            <button class="form-gt-add js-add-gt" type="button">Thêm</button>
+                       </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Chứng chỉ</h4>
+                        <div id="form-select-certificate">
+                              
+                            <!-- <div class="sub-add-certificate">
+                           
+                               <h6 class="sub-heading-add">Tên chứng chỉ</h6>
+                               <P class="sub-p-add">Tổ chức trao </P>
+                               <button class="sub-add-certificate-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>   -->
+
+                       </div>
+                       <div class="btn-wrapper">
+                            <button class="form-certificate-add js-add-certificate" type="button">Thêm</button>
+                       </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Sở Thích</h4>
+                        <div id="form-select-st">
+                              
+                            <!-- <div class="sub-add-st">
+                           
+                               <h6 class="sub-heading-add">Tên sở thích</h6>
+                               
+                               <button class="sub-add-st-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>   -->
+
+                       </div>
+                       <div class="btn-wrapper">
+                            <button class="form-st-add js-add-st" type="button">Thêm</button>
+                       </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Các Kỹ năng</h4>
+                        <div id="form-select-skill">
+                              
+                            <!-- <div class="sub-add-skill">
+                           
+                               <h6 class="sub-heading-add">Tên kỹ năng</h6>
+                               
+                               <button class="sub-add-skill-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>   -->
+
+                       </div>
+                       <div class="btn-wrapper">
+                            <button class="form-skill-add js-add-skill" type="button">Thêm</button>
+                       </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- <div class="form-select">
+                        <h4 class="subheading">Châm ngôn , mục tiêu</h4>
+                        <div id="form-select-cn"> -->
+                              
+                            <!-- <div class="sub-add-cn">
+                           
+                               <h6 class="sub-heading-add">Châm ngôn 1</h6>
+                               
+                               <button class="sub-add-cn-dele"  type="button"><i class="ti-close"></i></button>
+                           
+
+                           </div>   -->
+
+                       <!-- </div>
+                        <button class="form-cn-add js-add-cn" type="button">Thêm</button>
+                    </div> -->
+                </div>
+                <div>
+                    <div class="form-select">
+                        <h4 class="subheading">Thông tin khác (nếu có)</h4>
+                        <div id="form-select-them">
+                            <!-- <div class="sub-add-them">
+                               <h6 class="sub-heading-add">Thông tin</h6>
+                               <button class="sub-add-them-dele"  type="button"><i class="ti-close"></i></button>
+                           </div>   -->
+                       </div>
+                        <div class="btn-wrapper">
+                            <button class="form-them-add js-add-them" type="button">Thêm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-select">
+                    <div class="btn-wrapper">
+                        <button class="form-reset-button" type="button">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="btn-wrapper" style="margin-top: 20px;">
+            <button class="button-64 js-review-cv" role="button"><span class="text">Xem CV</span></button>
+        </div>
+    </div>
+    
+        
+    <!-- Phần Code Html của Mai Duy -->
+    <div class="cv-modal cv-js-modal">
+        <div class="cv-page-wrapper cv-js-page">
+            <div id="cv" class="cv-page">
+                <header class="cv-header">
+                    <div class="cv-bar cv-bar-large"></div>
+                    <div class="cv-infor-wrapper">
+                        <div class="cv-bar cv-ava-outer cv-col-3">
+                            <div class="cv-ava-inner">
+                                <img id="output-img" src="./assets/image/ava.png"/>
+                            </div>
+                        </div>
+                        <div class="cv-infor cv-col-9">
+                            <div class="cv-infor-name-wrapper cv-main-color">
+                                <span class="cv-infor-name" id="cv-name">Nguyễn Văn A</span>
+                            </div>
+                            <div class="cv-infor-job-wrapper cv-main-color">
+                                <span class="cv-infor-job" id="cv-job">Lập Trình Viên</span>
+                            </div>
+                            <div class="cv-infor-maxim-wrapper cv-main-color">
+                                <span class="cv-infor-maxim" ><span>"</span><span id="cv-maxim">Cách tốt nhất để thoát khỏi khó khăn là vượt qua nó.</span><span>"</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-infor-footer">
+                        <div class="cv-bar cv-bar-medium"></div>
+                    </div>
+                </header>
+                <div class="cv-body">
+                    <div class="cv-col-5">
+                        <div class="cv-left">
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Thông tin liên hệ</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <div class="cv-profile-infor-wrapper">
+                                <div class="cv-profile-infor-row cv-main-color">
+                                        <i class="cv-icon ti-calendar"></i>
+                                        <span class="cv-profile-infor" id="cv-birthday">
+                                            19/08/2002
+                                        </span>
+                                    </div>
+                                    <div class="cv-profile-infor-row cv-main-color">
+                                        <i class="cv-icon ti-email"></i>
+                                        <span class="cv-profile-infor cv-breaker" id="cv-email">
+                                            adeptrai@gmail.com
+                                        </span>
+                                    </div>
+                                    <div class="cv-profile-infor-row cv-main-color">
+                                        <i class="cv-icon ti-mobile"></i>
+                                        <span class="cv-profile-infor cv-breaker" id="cv-phone">
+                                            091 234 4567
+                                        </span>
+                                    </div>
+                                    <div class="cv-profile-infor-row cv-main-color">
+                                        <i class="cv-icon ti-facebook"></i>
+                                        <span class="cv-profile-infor cv-breaker" id="cv-facebook">
+                                            https://www.facebook.com/ADepTrai 
+                                        </span>
+                                    </div>
+                                    <div class="cv-profile-infor-row cv-main-color">
+                                        <i class="cv-icon ti-home"></i>
+                                        <span class="cv-profile-infor" id="cv-address">
+                                            Số 1 Phước Mỹ Trung, Bến Tre
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Các kỹ năng</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="skill">
+                                    <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">
+                                                    Tin học văn phòng
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Sử dụng thành thạo các công cụ Word, Excel, Power Point.</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">
+                                                    Tiếng anh
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Khả năng giao tiếp tiếng anh trôi chảy.</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Giải thưởng</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="gt">
+                                    <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">2014</span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Nhân viên xuất sắc nhất tháng</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Chứng chỉ</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="certificate">
+                                     <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">2016</span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">IELTS 9.0</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper" id="moreInformation">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Thông tin thêm</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <!-- <div class="cv-job-infor-wrapper">
+                                    <span class="cv-job-infor cv-skill">Điền thông tin khác nếu có</span>
+                                </div> -->
+                            </div>    
+                        </div>
+                    </div>  
+                    <div class="cv-col-7">
+                        <div class="cv-right">
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Học vấn</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="edu">
+                                    <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">Đại Học TĐT</span>
+                                            </div>
+                                            <div class="cv-job-time">
+                                                <span class="cv-job-start">
+                                                    8/2020
+                                                </span>
+                                                <span>-</span>
+                                                <span class="cv-job-end">
+                                                    12/2024
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-major-wrapper">
+                                                <span class="cv-job-major">Công nghệ thông tin</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span class="cv-job-infor cv-skill">Được học bổng 10 triệu.</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Kinh nghiệm làm việc</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="exp">
+                                    <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">Công ty CNTT</span>
+                                            </div>
+                                            <div class="cv-job-time">
+                                                <span class="cv-job-start">
+                                                    8/2020
+                                                </span>
+                                                <span>-</span>
+                                                <span class="cv-job-end">
+                                                    Hiện tại
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-major-wrapper">
+                                                <span class="cv-job-major">Developer</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Fix bug cho khoa CNTT.</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Hướng dẫn thực tập nghề nghiệp.</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Code phần mềm cho công ty.</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Hoạt động</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="act">
+                                     <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">Nhóm tình nguyện Mùa Hè Xanh</span>
+                                            </div>
+                                            <div class="cv-job-time">
+                                                <span class="cv-job-start">
+                                                    10/2012
+                                                </span>
+                                                <span>-</span>
+                                                <span class="cv-job-end">
+                                                    3/2015
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-major-wrapper">
+                                                <span class="cv-job-major">Tình nguyện viên</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Tập hợp các món quà và phân phát cho người vô gia cư.</span>
+                                            </div>
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Chia sẻ, động viên giúp họ vượt qua giai đoạn khó khăn trong cuộc sống.</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            <div class="cv-profile-wrapper">
+                                <div class="cv-title-wrapper cv-main-color">
+                                    <span class="cv-title">Sở thích</span>
+                                </div>
+                                <div class="cv-bar cv-bar-small"></div>
+                                <ul class="cv-job-infor-wrapper cv-inline" id="st">
+                                    <!-- <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">Đọc sách</span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Mỗi tháng đọc 1 quyển sách về kinh doanh về cách làm giàu</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cv-job-infor-row">
+                                        <div class="cv-job-title-wrapper cv-inline">
+                                            <div class="cv-job-title">
+                                                <i class="ti-angle-double-right"></i>
+                                                <span class="cv-title-secondary">Chơi game</span>
+                                            </div>
+                                        </div>
+                                        <div class="cv-job-content-wrapper">
+                                            <div class="cv-job-infor-wrapper">
+                                                <span>-</span>
+                                                <span class="cv-job-infor cv-skill">Mỗi tối đi khám răng cho mấy bạn.</span>
+                                            </div>
+                                        </div>
+                                    </li>  -->
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="cv-coder"><span>© Code by D&D</span></div>
+                <div class="cv-footer cv-bar cv-bar-large"></div>
+            </div>
+        </div>
+        <div class="cv-selection-color cv-js-page">
+            <div class="selection-color-header">
+                <span class="selection-color-title">Chọn màu cho CV</span>
+            </div>
+            <div class="selection-color-option">
+                <button class="selection-color-btn btn-blue js-color-blue"></button>
+                <button class="selection-color-btn btn-pink js-color-pink"></button>
+                <button class="selection-color-btn btn-green js-color-green"></button>
+            </div>
+            <div class="selection-color-operation">
+                <button id="download" class="btn-operation btn-dowload-cv js-dowload">Download</button>
+            </div>
+            <div class="selection-color-operation">
+                <button class="btn-operation btn-close-cv js-close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- thêm thông tin học vấn-->
+    <div  class="modal-edu" id="style-1">
+        <div action="#" class="modal-container-edu">
+            <div class="modal-close js-close-input-edu">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading">Thêm thông tin học vấn</div>
+            <form action="" id="form-add-edu">
+                <div>
+                    <lable class="sub-label-edu">Nơi đào tạo</lable>
+                    <input type="text" required class="input-edu" id="input-edu__school"  >
+                </div>
+                <div>
+                    <lable class="sub-label-edu">Chuyên ngành</lable>
+                    <input type="text" required class="input-edu" id="input-edu__major"  >
+                </div>
+                <div>
+                    <lable class="sub-label-edu">Thành tích</lable>
+                    <input type="text" required class="input-edu" id="input-edu__achievement"  >
+                </div>
+                <div>
+                    <lable class="sub-label-edu">Ngày bắt đầu</lable>
+                    <input type="month" required class="input-edu" id="input-edu__start"  >
+                </div>
+                <div>
+                    <lable class="sub-label-edu">Ngày kết thúc</lable>
+                    <input type="month" required class="input-edu" id="input-edu__end"  >
+    
+                </div>
+                <div>
+                    <button class="add-edu" id="btn-edu-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- thêm thông tin kinh nghiệm làm việc-->
+    <div class="modal-exp" id="style-2">
+        <div class="modal-container-exp">
+            <div class="modal-close js-close-input-exp">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading">Thêm thông tin kinh nghiệm làm việc</div>
+            <form action="" id="form-add-exp">
+                <div>
+                    <lable class="sub-label-exp">Công ty</lable>
+                    <input type="text" required class="input-exp" id="input-exp__company">
+                </div>
+                <div>
+                    <lable class="sub-label-exp">Vị trí</lable>
+                    <input type="text" required class="input-exp" id="input-exp__position">
+                </div>
+                <div>
+                    <lable class="sub-label-cn">Mô tả</lable>
+                    <textarea class="mota" rows="5" cols="45" id="input-exp__description"></textarea>
+                </div>
+                <div>
+                    <lable class="sub-label-exp">Ngày bắt đầu</lable>
+                    <input type="month" required class="input-exp" id="input-exp__start">
+                </div>
+                <div>
+                    <lable class="sub-label-exp">Ngày kết thúc</lable>
+                    <input type="month" required class="input-exp" id="input-exp__end">
+                </div>
+                <div>
+                    <button class="add-exp" id="btn-exp-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- thêm thông tin hoạt động-->
+    <div class="modal-act" id="style-3">
+        <div class="modal-container-act">
+            <div class="modal-close js-close-input-act">
+                <i class="ti-close close-input"></i>
+            </div>
+            <div class="form-heading">Thêm thông tin hoạt động</div>
+            <form action="" id="form-add-act">
+                <div>
+                    <lable class="sub-label-act">Tên hoạt động</lable>
+                    <input type="text" required class="input-act" id="input-act__name">
+                </div>
+                <div>
+                    <lable class="sub-label-act">Tổ chức</lable>
+                    <input type="text" required class="input-act" id="input-act__group">
+                </div>
+                <div>
+                    <lable class="sub-label-act">Ngày bắt đầu</lable>
+                    <input type="month" required class="input-act" id="input-act__start">
+                </div>
+                <div>
+                    <lable class="sub-label-act">Ngày kết thúc</lable>
+                    <input type="month" required class="input-act" id="input-act__end">   
+                </div>
+                <div>
+                    <lable class="sub-label-act">Mô tả</lable>
+                    <textarea class="mota" rows="5" cols="30" id="input-act__description"></textarea>
+                </div>
+                <div>
+                    <button class="add-act" id="btn-act-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- thêm thông tin giải thưởng-->
+    <div class="modal-gt" id="style-4">
+        <div class="modal-container-gt">
+            <div class="modal-close js-close-input-gt">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading">Thêm thông tin giải thưởng</div>
+            <form action="" id="form-add-gt">
+                <div>
+                    <lable class="sub-label-gt">Tên Giải Thưởng </lable>
+                    <input type="text" required class="input-gt" id="input-gt__name">
+                </div>
+                
+                <div>
+                    <lable class="sub-label-gt">Năm nhận giải</lable>
+                    <input type="text" required class="input-gt" id="input-gt__date">
+                </div>
+                
+                <div>
+                    <button class="add-gt" id="btn-gt-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- thêm thông tin chứng chỉ-->
+    <div class="modal-certificate" id="style-5">
+        <div class="modal-container-certificate">
+            <div class="modal-close js-close-input-certificate">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading">Thêm thông tin chứng chỉ</div>
+            <form action="" id="form-add-certificate">
+                <div>
+                    <lable class="sub-label-certificate">Tên chứng chỉ</lable>
+                    <input type="text" required class="input-certificate" id="input-certificate__name">
+                </div>
+                
+                <div>
+                    <lable class="sub-label-gt">Năm nhận chứng chỉ</lable>
+                    <input type="text" required class="input-certificate" id="input-certificate__date">
+                </div>
+                <div>
+                    <button class="add-certificate" id="btn-certificate-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- thêm thông tin sở thích-->
+    <div class="modal-st" id="style-6">
+        <div class="modal-container-st">
+            <div class="modal-close js-close-input-st">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading">Thêm thông tin sở thích</div>
+            <form action="" id="form-add-st">
+                <div>
+                    <lable class="sub-label-st">Sở thích</lable>
+                    <input type="text" required class="input-st" id="input-st__name">
+                </div>
+                <div>
+                    <lable class="sub-label-st">Mô tả sở thích</lable>
+                    <textarea class="mota" rows="5" cols="30" id="input-st__description"></textarea>
+                </div>
+                <div>
+                    <button class="add-st" id="btn-st-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- thêm thông tin kỹ năng-->
+    <div class="modal-skill" id="style-7">
+        <div class="modal-container-skill">
+            <div class="modal-close js-close-input-skill">
+                <i class="ti-close close-input"></i>
+            </div>
+            <div class="form-heading">Thêm thông tin kỹ năng</div>
+            <form action="" id="form-add-skill">
+                <div>
+                    <lable class="sub-label-skill">Kỹ năng</lable>
+                    <input type="text" required class="input-skill" id="input-skill__name">
+                </div>
+                <div>
+                    <lable class="sub-label-skill">Mô tả kỹ năng</lable>
+                    <textarea class="mota" rows="5" cols="30" id="input-skill__description"></textarea>
+                </div>
+                <div>
+                    <button class="add-skill" id="btn-skill-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- thêm thông thêm-->
+    <div class="modal-them" id="style-8">
+        <div class="modal-container-them">
+            <div class="modal-close js-close-input-them">
+                <i class="ti-close close-input "></i>
+            </div>
+            <div class="form-heading"> Thêm thông tin khác (nếu có)</div>
+            <form action="" id="form-add-them">
+                <div>
+                    <lable class="sub-label-them">Thông tin khác</lable>
+                    <textarea class="mota" rows="10" cols="45" id="input-moreInfor__description"></textarea>
+                </div>
+                <div>
+                    <button class="add-them" id="btn-them-add" type="submit">Thêm</button>
+                </div>
+            </form>
+        </div>>
+    </div>
+
+
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="./assets/js/cv.js"></script>
+</body>
+</html>
