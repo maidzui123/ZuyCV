@@ -377,7 +377,7 @@ $('#form-add-act').submit((event)=>{
 $('#form-add-gt').submit((event)=>{
     event.preventDefault();
     var getId=makeid()
-    $('#form-select-gt').append('<div class="sub-add-gt '+getId+'"> <h6 class="sub-heading-add">'+$('#input-gt__date').val()+'</h6> <P class="sub-p-add">'+$('#input-gt__name').val()+'</P> <button class="sub-add-gt-dele"  id="btn-'+getId+'" type="button"><i class="ti-close"></i></button> </div>')
+    $('#form-select-gt').append('<div class="sub-add-gt '+getId+'"> <h6 class="sub-heading-add">'+$('#input-gt__year').val()+'</h6> <P class="sub-p-add">'+$('#input-gt__name').val()+'</P> <button class="sub-add-gt-dele"  id="btn-'+getId+'" type="button"><i class="ti-close"></i></button> </div>')
     $('#gt').append('<li class="cv-job-infor-row '+getId+'"> <div class="cv-job-title-wrapper cv-inline"> <div class="cv-job-title"> <i class="ti-angle-double-right"></i> <span class="cv-title-secondary">'+$('#input-gt__year').val()+'</span> </div> </div> <div class="cv-job-content-wrapper"> <div class="cv-job-infor-wrapper"> <span>-</span> <span class="cv-job-infor cv-skill">'+$('#input-gt__name').val()+'</span> </div> </div> </li>')
     $('#btn-'+getId).click(()=>{
         $('.'+getId).remove()
@@ -388,7 +388,7 @@ $('#form-add-gt').submit((event)=>{
 $('#form-add-certificate').submit((event)=>{
     event.preventDefault();
     var getId=makeid()
-    $('#form-select-certificate').append('<div class="sub-add-gt '+getId+'"> <h6 class="sub-heading-add">'+$('#input-certificate__date').val()+'</h6> <P class="sub-p-add">'+$('#input-certificate__name').val()+'</P> <button class="sub-add-gt-dele"  id="btn-'+getId+'" type="button"><i class="ti-close"></i></button> </div>')
+    $('#form-select-certificate').append('<div class="sub-add-gt '+getId+'"> <h6 class="sub-heading-add">'+$('#input-certificate__year').val()+'</h6> <P class="sub-p-add">'+$('#input-certificate__name').val()+'</P> <button class="sub-add-gt-dele"  id="btn-'+getId+'" type="button"><i class="ti-close"></i></button> </div>')
     $('#certificate').append('<li class="cv-job-infor-row '+getId+'"> <div class="cv-job-title-wrapper cv-inline"> <div class="cv-job-title"> <i class="ti-angle-double-right"></i> <span class="cv-title-secondary">'+$('#input-certificate__year').val()+'</span> </div> </div> <div class="cv-job-content-wrapper"> <div class="cv-job-infor-wrapper"> <span>-</span> <span class="cv-job-infor cv-skill">'+$('#input-certificate__name').val()+'</span> </div> </div> </li>')
     $('#btn-'+getId).click(()=>{
         $('.'+getId).remove()
