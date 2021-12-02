@@ -92,19 +92,6 @@ function hideAddskill() {
 
 }
 const modalskill= document.querySelector('.modal-skill')
-/* mở thêm thông tin châm ngôn , mục tiêu */
-// const showAddcns = document.querySelector('.js-add-cn')
-// const hideAddcns = document.querySelector('.js-close-input-cn')
-// showAddcns.addEventListener("click", showAddcn)
-// hideAddcns.addEventListener("click", hideAddcn)
-// function showAddcn() {
-//     modalcn.classList.add('js-open')
-// }
-// function hideAddcn() {
-//     modalcn.classList.remove('js-open')
-
-// }
-const modalcn= document.querySelector('.modal-cn')
 /* mở thêm thông tin them */
 const showAddthems = document.querySelector('.js-add-them')
 const hideAddthems = document.querySelector('.js-close-input-them')
@@ -118,34 +105,6 @@ function hideAddthem() {
 
 }
 const modalthem= document.querySelector('.modal-them')
-// nút thêm bằng nút xóa ??
-// const hideAddEdus2 = document.querySelector('.add-edu')
-// hideAddEdus2.addEventListener("click",hideAddEdu)
-
-// const hideAddExps2 = document.querySelector('.add-exp')
-// hideAddExps2.addEventListener("click",hideAddExp)
-
-// const hideAddActs2 = document.querySelector('.add-act')
-// hideAddActs2.addEventListener("click",hideAddAct)
-
-// const hideAddGts2 = document.querySelector('.add-gt')
-// hideAddGts2.addEventListener("click",hideAddGt)
-
-// const hideAddCertificates2 = document.querySelector('.add-certificate')
-// hideAddCertificates2.addEventListener("click",hideAddCertificate)
-
-// const hideAddSts2 = document.querySelector('.add-st')
-// hideAddSts2.addEventListener("click",hideAddst)
-
-// const hideAddSkills2 = document.querySelector('.add-skill')
-// hideAddSkills2.addEventListener("click",hideAddskill)
-
-// const hideAddCns2 = document.querySelector('.add-cn')
-// hideAddCns2.addEventListener("click",hideAddcn)
-
-const hideAddThems2 = document.querySelector('.add-them')
-hideAddThems2.addEventListener("click",hideAddthem)
-
 
 const reload = document.querySelector('.form-reset-button')
 reload.addEventListener("click",reloadpage)
@@ -153,41 +112,6 @@ reload.addEventListener("click",reloadpage)
 function reloadpage(){
     location.reload();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Phần code JS của Mai Duy
 const openCv = document.querySelector('.js-review-cv')
@@ -293,7 +217,6 @@ for(const modalPage of modalPages) {
 }
 
 // Phần dowload CV
-
 $('#download').click(CreatePDFfromHTML)
 function CreatePDFfromHTML() {
     var HTML_Width = $("#cv").width();
@@ -428,7 +351,7 @@ $('#form-add-them').submit((event)=>{
     })
     $('div').removeClass('js-open')
 })
-
+// Phần random id
 function makeid() {
     var result           = '';
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -438,7 +361,6 @@ function makeid() {
    }
    return result;
 }
-
 // Upload ảnh ava
 var loadFile = function(event) {
 	var image = document.getElementById('output-img');
