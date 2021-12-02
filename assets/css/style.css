@@ -114,6 +114,13 @@ input[type="file"] {
   color: #00bcd4;
   font-weight: 400;
 }
+.heading-2 {
+  margin-top: 40px;
+  font-size: 35px;
+  text-align: center;
+  color: #0f8a2e;
+  font-weight: 400;
+}
 
 .input-main {
   width: 50%;
@@ -339,8 +346,8 @@ h3 {
 .add-skill,
 .add-cn,
 .add-them {
-  border: 1px #28a745 solid;
-  color: #28a745;
+  border: 1px #00bcd4 solid;
+  color: #00bcd4;
   background-color: #fff;
   margin-top: 20px;
   padding: 6px 40px;
@@ -357,8 +364,8 @@ h3 {
 .add-cn:hover,
 .add-them:hover {
   color: #fff;
-  background-color: #28a745;
-  border: 1px #28a745 solid;
+  background-color:#00bcd4;
+  border: 1px #00bcd4 solid;
 }
 .mota {
   display: block;
