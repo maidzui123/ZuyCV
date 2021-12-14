@@ -101,7 +101,7 @@ input[type="file"] {
     
 } */
 .heading {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 100;
   text-align: center;
   color: #00bcd4;
@@ -617,4 +617,75 @@ h3 {
 }
 .star-field .layer:nth-child(4) {
     animation: sf-fly-by-4 5s linear infinite;
+}
+
+/* Phần mở đầu CV  */
+.main-start {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.js-animation-start
+{
+  animation: modalFadeOut ease 0.8s;
+}
+.js-close-start {
+  display: none;
+}
+.start-title-wrapper {
+  color: #00bcd4;
+  font-size: 80px;
+  font-weight: 200;
+  margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-second-wrapper {
+  margin-bottom: 20px;
+}
+.start-coder {
+  font-size: 30px;
+}
+x-sign {
+  --interval: 1s;
+  display: block;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  color: azure;
+  --color1: azure;
+  --color2: aqua;
+  --color3: dodgerblue;
+  --color4: blue;
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 0.5s infinite;
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  to {
+      opacity: 0;
+      transform: translateY(-300px);
+  }
 }

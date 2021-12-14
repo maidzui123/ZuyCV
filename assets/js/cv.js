@@ -366,3 +366,37 @@ var loadFile = function(event) {
 	var image = document.getElementById('output-img');
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
+
+
+
+//Hiệu ứng title phần mở đầu
+const signs = document.querySelectorAll('x-sign')
+const randomIn = (min, max) => (
+  Math.floor(Math.random() * (max - min + 1) + min)
+)
+
+const mixupInterval = el => {
+  const ms = randomIn(2000, 4000)
+  el.style.setProperty('--interval', `${ms}ms`)
+}
+
+signs.forEach(el => {
+  mixupInterval(el)
+  el.addEventListener('webkitAnimationIteration', () => {
+    mixupInterval(el)
+  })
+})
+
+//Đóng phần mở đầu
+const hideStart = document.querySelector('.js-close-start-btn')
+const startWrapper = document.querySelector('.main-start')
+// const startFadeOut = document.querySelector('.main-start')
+hideStart.addEventListener("click", hideStartWrapper)
+function hideStartWrapper() {
+    startWrapper.classList.add('js-animation-start')
+    setTimeout(() => {
+        startWrapper.classList.add('js-close-start')
+    },800)
+    // startFadeOut.style.animation = 'modalFadeOut ease 0.8s'
+}
+
