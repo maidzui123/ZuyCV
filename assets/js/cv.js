@@ -261,7 +261,6 @@ $.date = function(dateObject) {
     return date;
 };
 // thêm thông tin edu////
-
 $('#form-add-edu').submit((event)=>{
     event.preventDefault();
     var getId=makeid()
